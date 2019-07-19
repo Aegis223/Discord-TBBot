@@ -104,6 +104,7 @@ function play(guild, song) {
 	const serverQueue = queue.get(guild.id);
 
 	if (!song) {
+        console.log("Bot leaving channel.")
 		serverQueue.voiceChannel.leave();
 		queue.delete(guild.id);
 		return;
